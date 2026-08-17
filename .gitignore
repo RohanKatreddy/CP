@@ -1,0 +1,14 @@
+# Compiled binaries / build artifacts
+*.exe
+*.out
+*.o
+*.obj
+a.out
+
+# Python
+__pycache__/
+*.pyc
+
+# Local input/output scratch files
+input.txt
+output.txt
