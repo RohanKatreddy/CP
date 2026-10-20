@@ -6,8 +6,8 @@
 #define MP make_pair
 
 using namespace std;
-long long int m[1000000+9];
-vector<long long> c;
+int m[1000000+9];
+vector<int> c;
 
 
 int main() {
@@ -17,24 +17,24 @@ int main() {
     cout.tie(NULL);
 
 
-    long long n, d;
+    int n, d;
     cin >> n >> d;
     for (int i = 0; i < n; i++){
-        long long temp;
+        int temp;
         cin >> temp;
         c.PB(temp);
     }
 
 
-    for (long long i = 1; i <= d; i++){
-        m[i] = LONG_LONG_MAX-1;
+    for (int i = 1; i <= d; i++){
+        m[i] = INT_MAX-1;
         for (auto j : c){
             if (i - j < 0) continue;
             m[i] = min(m[i], m[i-j]+1);
         }
     }
 
-    cout << (m[d] >= LONG_LONG_MAX-1 ? -1 : m[d]) << '\n';
+    cout << (m[d] >= INT_MAX-1 ? -1 : m[d]) << '\n';
 }
 
 
